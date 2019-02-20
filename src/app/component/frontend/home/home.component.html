@@ -1,0 +1,45 @@
+<header>
+  <div class="container">
+    <div class="row tam-up">
+      <div class="col-12 tam-img d-flex">
+        <span class="mx-auto">
+          <img
+            src="/assets/1png.png" id="car" *ngIf="pointOne">
+
+            <img
+            src="/assets/2.png" id="nave" *ngIf="pointTwo">
+            <img
+            src="/assets/3.png" id="atencion" *ngIf="pointThree">
+        </span>
+      </div>
+      <div class="col-12 text-center text-white">
+        <!-- <h1 class="bold">Si viajas, nosotros te acompañamos. Disfrutá tus vacaciones sin preocupaciones.</h1> -->
+        <h1 class="bold" id="text" *ngIf="pointOne">Si sos Uber, nosotros te cubrimos. Asegurá tu auto y disfrutá nuestros beneficios.</h1>
+        <h1 class="bold" id="text" *ngIf="pointTwo">EleganceSeguros, la forma más ágil de calcular el seguro de tu auto en 1 paso.</h1>
+        <h1 class="bold" id="text" *ngIf="pointThree">Atención al cliente las 24hs. Velocidad y agilidad garantizada.</h1>
+
+
+      </div>
+    </div>
+    <div class="row tam-down">
+      <div class="col-12 text-center">
+        <i class="material-icons text-white" (click)="pointTwo=false;pointOne=false;pointThree=true;">{{(pointThree === true) ? 'lens' : 'panorama_fish_eye'}}</i>
+        <!-- <span> -->
+          <!-- <i class="material-icons text-white" >lens</i> -->
+          <i class="material-icons text-white" (click)="pointTwo=false;pointOne=true;pointThree=false;">{{(pointOne === true) ? 'lens' : 'panorama_fish_eye'}}</i>
+        <!-- </span> -->
+        <i class="material-icons text-white" (click)="pointTwo=true;pointOne=false;pointThree=false;">{{(pointTwo === true) ? 'lens' : 'panorama_fish_eye'}}</i>
+
+      </div>
+      <div class="col-12 d-flex">
+        <span class="mx-auto my-auto">
+          <button class="btn-cotizar d-flex" (click)="changeLayout()" id="boton">
+            <a class="ml-5 my-auto" >COTIZAR AHORA</a>
+            <i class="material-icons ml-auto my-auto icon">label_important</i>
+          </button>
+          <p class="h3 text-info">¿Ya sos cliente? <a class="text-white">Iniciá sesión</a></p>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>

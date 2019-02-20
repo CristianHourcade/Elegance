@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+header{
+    height: 100vh;
+    background-color: #000096;
+    font-family: 'Patua One', cursive;
+
+}
+.tam-img{
+    margin-top: 20vh;
+    height: 20vh;
+}
+.tam-img img{
+    height: 100%;
+}
+.tam-up{
+    height: 70vh;
+}
+.tam-down{
+    height: 30vh;
+}
+.btn-cotizar{
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    border: 0;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0px 0px 4px #23232380;
+    background: #ff4b00;
+}
+.bold{
+    font-weight: bold;
+}
+.icon{
+    font-size: 30px;
+}
+#text{
+    animation: fade-in 1s ;
+}
+#car{
+    animation: animation-car 2s ;
+}
+#nave{
+    animation: toUp 1.4s;
+}
+#atencion{
+    animation: inicio 1.4s;
+}
+#boton{
+    animation: boton 2s infinite;
+}
+
+
+
+/**     ANIMACIONES     **/
+
+@keyframes fade-in{
+    0%{
+        transform: translate(40%,0%);
+    }
+    100%{
+        transform: translate(0%,0%);
+    }
+}
+
+@keyframes animation-car{
+    0%{
+        opacity: 0;
+    }
+    39%{
+
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+        transform: translate(100%,0%);
+    }
+   
+    100%{
+        transform: translate(0%,0%);
+    }
+}
+@keyframes toUp{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+        transform: translate(-40%,70%);
+    }
+    100%{
+        transform: translate(0%,0%)
+    }
+}
+
+@keyframes inicio{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes boton{
+    0%{
+        transform: translate(0%,0%)
+    }
+    50%{
+        transform: translate(0%,5%)        
+    }
+    100%{
+        transform: translate(0%,0%)
+
+    }
+}
